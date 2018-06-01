@@ -1,0 +1,106 @@
+.App {
+    text-align: left;
+    .ant-btn-primary {
+        background-color: red;
+    }
+}
+
+.header {
+    position: fixed;
+    height: 80px;
+    line-height: 80px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+.footer {
+    position: fixed;
+    height: 80px;
+    padding: 32px 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+}
+.content{
+	min-height: 100%;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background-color: #fff;
+}
+#root{
+	min-height: 100%;
+	.App{
+		min-height: 100%;
+		.layout{
+			min-height: 100%;
+		}
+	}
+    //电影列表右侧内容的样式
+    .movielist-content{
+        padding: 20px;        
+        .list{
+            .ant-row{
+                >div{   
+                    //选中第5个以后的列添加上间距
+                    &:nth-of-type(n+5){
+                            margin-top: 20px;
+                    }                 
+                    >div{                        
+                        border:1px solid #ccc;
+                        height: 440px;
+                        padding: 20px;
+                        text-align: center;
+                        &:hover{
+                            box-shadow: 0px 0px 2px #ccc;
+                        }
+                        >img{
+                            width: 100%;
+                            height: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.logo {
+    width: 120px;
+    height: 50px;
+    background: url(http://img0.imgtn.bdimg.com/it/u=1625441706,4129845040&fm=27&gp=0.jpg) no-repeat;
+    background-size: 100% 100%;
+    margin: 16px 24px 16px 0;
+    float: left;
+    line-height: 80px;
+}
+
+.menu-item {
+    line-height: 80px;
+}
+.ant-layout-header{
+	background-color: yellowgreen;
+}
+.ant-menu-dark.ant-menu-horizontal{
+    background-color: yellowgreen;
+    height: 80px;
+}
+.ant-menu-horizontal{
+	border: 0;
+}
+.ant-menu.ant-menu-dark .ant-menu-item-selected{
+    background-color: #1890ff;
+}
+
+.ant-layout-has-sider{
+    background-color: #fff;
+    min-height: 100%;
+    .ant-layout-sider{
+        min-height: 100%;
+        background-color: #fff;
+    }
+    .ant-layout-content{
+        min-height:100%;
+    }
+}
